@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quiz App</title>
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<!-- Stylesheets -->
+		
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="jquerystylesheet" href="jquery-ui.min.css">
+		
+ 
+	</head>
+	<body>
+		<div class=SwankyBackground>
+			<div id=StartWrapper>
+				<form id=StartButton>
+				<button type="submit" form=StartButton value="submit">Start!</button>
+				</form>
+				<p>Name That Picture 80s Sci-Fi Trivia Quiz Challange! </p>
+			</div>
+
+			<div class=questionanim>
+				<div class=Question>Question 1: What movie is this picture from?</div>
+					<div class=AnswerBox></br>
+						1)Willie Wonka and the Choclate Factory</br></br>
+						2)The Breakfast Club</br></br>
+						3)Predator</br></br>
+						4)The Gods Must be Crazy</br></br>
+						5)Star Wars</br>
+					</div>
+				<img class=QuestionImg src="images/sw.jpg">
+				<div class=AnwserCheckBox>
+					<form class="inputboxes">
+						</br>
+						<label>1) </label>
+						<input type="checkbox" name="fooby[1][]" val="1"></br></br>	
+						<label>2) </label>
+						<input type="checkbox" name="fooby[1][]" val="2"></br></br>
+						<label>3) </label>
+						<input type="checkbox" name="fooby[1][]" val="3"></br></br>
+						<label>4) </label>
+						<input type="checkbox" name="fooby[1][]" val="4"></br></br>
+						<label>5) </label>
+						<input type="checkbox" name="fooby[1][]" val="5">
+					</form>
+				</div>
+				<div class="bottomcrawl">
+					<p id="bottomcrawltext"> bottom crawl fill text </p>	
+				</div>
+				<form id=answerbutton><div class="submitanswer">
+					<button type="submit">SUBMIT!</button>
+				</div>
+				</form>
+			</div>
+			<!--<div class="scoreslidercontainer">
+			Progress: <div id="scoreslider"></div>
+			</div> -->
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script src="jquery.js"></script>
+		<script src="jquery-ui.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+* {
+	font-family: Roboto Slab;
+	color: lime;
+	font-size: large;
+	font-weight: bold;
+
+}
+.SwankyBackground {
+	background-image: url("images/Smexy 80s Grid.jpg");
+	background-repeat: no-repeat;	
+	background-color: black;
+	background-size: cover;
+}
+/*
+	background-color: #502C2C;
+	border-color: indianred;
+*/
+#StartWrapper {
+	display: block;
+	height: 900px;
+	width: 100%;
+	
+}
+
+#StartWrapper button {
+	top: 40px;
+	position: absolute;
+	height: 100px;
+	
+	align-content: center;
+	left: 10%;
+	margin: auto;
+	display: inline-block;	
+	font-size: xx-large;
+	
+	font-weight: bolder;
+	background-color: black;
+	border-color: lime;
+	opacity: 0.8;
+}
+
+#StartWrapper p {
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+	display: none;
+	display: inline-block;
+	position: absolute;
+	left: 230px;
+	top: 10px;
+	border: 3px;
+	width: 70%;
+
+	max-width: 690px;
+	background-color: black;
+	border-color: lime;
+	border-style: dashed;
+	min-width: 420px;
+
+}
+
+.Question {
+	position: absolute;
+	display: none;
+	top: 170px;
+	width: 80%;
+	height: 80px;
+	background-color: black;
+	border-color: lime;
+	border-style: dashed;
+	border-width: 3px;
+	left: 10%;
+	text-align:center;
+	line-height: 80px;
+
+
+}
+
+.QuestionImg {
+	display: inline-block; 
+	display: none;
+	position: absolute;
+	top: 300px;
+	width: 40%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	background-color: black;
+	left: 10%;
+	height:300px;
+}
+
+.AnswerBox {
+	display: inline-block;
+	display: none;
+	position: absolute;
+	top: 300px;
+	width: 22.5%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	background-color: black;
+	left: 55%;
+	height: 300px;
+	text-align: center;
+	min-width: 180px;
+
+}
+
+.AnwserCheckBox {
+	display: inline-block;
+	display: none;
+	position: absolute;
+	top: 300px;
+	width: 8.5%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	background-color: black;
+	left: 80%;
+	height: 300px;
+}
+
+.bottomcrawl {
+	display: inline-block;
+	display: none;
+	position: absolute;
+	top: 630px;
+	width: 60%;
+	left: 10%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	background-color: black;
+	min-width:160px;
+	min-height: 50px;
+	height: 55px;
+	text-align: center;
+}
+
+
+.submitanswer {
+	display: inline-block;
+	display: none;
+	position: absolute;
+	top: 630px;
+	width: 15%;
+	left: 75%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	min-width:160px;
+	min-height: 50px;
+	height: 55px;
+}
+
+.submitanswer button {
+	
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 160px;
+	position: relative;
+	top: 2px;
+	left: 5px;
+	margin: auto;
+	font-size: xx-large;
+}
+
+.inputboxes {
+	margin-left: 15px;
+	display: none;
+}
+
+.inputboxes input {
+	width: 25px;
+	height: 25px;
+}
+
+.scoreslidercontainer{
+	display: inline-block;
+	display: none;
+	position: absolute;
+	top: 700px;
+	width: 60%;
+	left: 10%;
+	border-width: 3px;
+	border-color: lime;
+	border-style: dashed;
+	background-color: black;
+	min-width:160px;
+	min-height: 50px;
+	height: 55px;
+	text-align: left;
+}
+
+#scoreslider {
+	font-family: default;
+	color: grey;
+	background-color: white;
+	height: 30px;
+	width: 600px;
+	z-index: 10;
+}
