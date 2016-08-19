@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var a = "";
 	var $questionnumber = 0;
+    var correct = 0;
 	$("#StartButton").submit(function(e) {	
 		console.log("Start Button Clicked!");
 		e.preventDefault();
@@ -43,10 +44,11 @@ $(document).ready(function(){
 		console.log("Submit Button Clicked");
 		e.preventDefault();
 		qn = $questionnumber;
-		checkanswer(qn, a);
+		checkanswer(qn, a, correct);
 		showq($questionnumber);
 		$questionnumber += 1;
-		updateq($questionnumber);
+        console.log("number of correct is now " + returnscore(correct));
+		updateq($questionnumber, correct);
 		showq($questionnumber);
 	});
 
@@ -67,8 +69,11 @@ function showq($questionnumber){
 	
 };
 
-function checkanswer(qn, answer){
+
+
+function checkanswer(qn, answer, correct){
 	console.log("updating to question " + qn);
+    
 	switch(qn) {
     case 0:
         console.log("answer is " + answer);
@@ -82,7 +87,7 @@ function checkanswer(qn, answer){
         else
         {
         	$("#bottomcrawltext").text("Correct!!");
-        	
+            updatescore(correct);	
         }
         $( ".scoreslider" ).progressbar( "option", "value", 1 );
         break;
@@ -95,6 +100,8 @@ function checkanswer(qn, answer){
         else
         {
         	$("#bottomcrawltext").text("Correct!!");
+            updatescore(correct);
+            
         }
         $( ".scoreslider" ).progressbar( "option", "value", 2 );
         break;
@@ -107,6 +114,8 @@ function checkanswer(qn, answer){
         else
         {
         	$("#bottomcrawltext").text("That's Correct!! Stranger Things was just released this year");
+            correct += 1;
+            console.log("number of correct is now " + correct);
         }
         $( ".scoreslider" ).progressbar( "option", "value", 3 );
         break;
@@ -119,6 +128,8 @@ function checkanswer(qn, answer){
         else
         {
         	$("#bottomcrawltext").text("Correctamundo!");
+            correct += 1;
+            console.log("number of correct is now " + correct);
         }
         $( ".scoreslider" ).progressbar( "option", "value", 4 );
         break;
@@ -131,13 +142,23 @@ function checkanswer(qn, answer){
         else
         {
         	$("#bottomcrawltext").text("Yeah Dude, Rock on!");
+            correct += 1;
+            console.log("number of correct is now " + correct);
         }
         $( ".scoreslider" ).progressbar( "option", "value", 5 );
         break;
 	}
 }
 
-function updateq(questionnumber)
+function updatescore(correct){
+    correct = correct + 1;
+}
+
+function returnscore(correct){
+    return correct;
+}
+
+function updateq(questionnumber, correct)
 {
 	switch(questionnumber) 
 	{
@@ -162,10 +183,10 @@ function updateq(questionnumber)
        	$(".QuestionImg").attr("src", "images/bt.jpg");
         break;
     case 5:
-        console.log("Question 2 checkanswer");
-        break;
-    case 6:
-     	console.log("Question 2 checkanswer");
+        $(".Question").html("Congratulations!");
+        console.log("Number of correct is" + correct);
+        $(".AnswerBox").html("You win!!!!</br>");
+        $(".QuestionImg").attr("src", "images/win.png");
         break;
 	}
 }
